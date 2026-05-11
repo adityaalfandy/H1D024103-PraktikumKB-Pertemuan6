@@ -1,4 +1,7 @@
-# Neural Network dari Scratch — Perceptron & Backpropagation
+## Nama : Aditya Alfandy
+## NIM : H1D024103
+## Shift Awal : C
+## Shift Akhir : A
 
 Proyek ini berisi implementasi dua algoritma jaringan saraf dasar menggunakan Python dan NumPy: **Perceptron** dan **Backpropagation**. Masing-masing algoritma terdiri dari dua file: file kelas utama dan file eksekusi/pengujian.
 
