@@ -18,7 +18,7 @@ Proyek ini berisi implementasi dua algoritma jaringan saraf dasar menggunakan Py
 
 ---
 
-## 1. `Perceptron.py` — Kelas Perceptron
+## 1. `Perceptron.py`   Kelas Perceptron
 
 ### Gambaran Umum
 File ini mendefinisikan kelas `Perceptron`, sebuah jaringan saraf satu lapis yang mampu menyelesaikan masalah yang **linearly separable** (dapat dipisahkan secara linear), seperti gerbang logika AND dan OR.
@@ -26,7 +26,7 @@ File ini mendefinisikan kelas `Perceptron`, sebuah jaringan saraf satu lapis yan
 ### Atribut
 | Atribut | Deskripsi |
 |---|---|
-| `alpha` | Learning rate — seberapa besar langkah pembaruan bobot setiap iterasi |
+| `alpha` | Learning rate   seberapa besar langkah pembaruan bobot setiap iterasi |
 | `epoch` | Jumlah maksimum iterasi pelatihan |
 | `w_` | Array bobot dan bias yang digabungkan (`w_[0]` = bias, `w_[1:]` = bobot) |
 
@@ -66,7 +66,7 @@ Fungsi utama pelatihan Perceptron, dengan langkah-langkah:
 
 ---
 
-## 2. `Perceptron_or.py` — Pengujian Perceptron pada Masalah OR
+## 2. `Perceptron_or.py`   Pengujian Perceptron pada Masalah OR
 
 ### Gambaran Umum
 File eksekusi yang menguji kelas `Perceptron` menggunakan dataset gerbang logika **OR Bipolar**.
@@ -95,7 +95,7 @@ epoch = 10    # Maksimum epoch
 
 ---
 
-## 3. `Backpropagation.py` — Kelas Backpropagation
+## 3. `Backpropagation.py`   Kelas Backpropagation
 
 ### Gambaran Umum
 File ini mendefinisikan kelas `Backpropagation`, sebuah jaringan saraf **multilayer** (terdiri dari input layer, hidden layer, dan output layer) yang mampu menyelesaikan masalah **non-linearly separable** seperti XOR. Menggunakan algoritma *gradient descent* dengan propagasi error ke belakang.
@@ -142,13 +142,13 @@ Menampilkan grafik **perkembangan error (SSE)** setiap epoch menggunakan Matplot
 #### `fit(self, X, t)`
 Fungsi utama pelatihan Backpropagation, terdiri dari dua fase besar:
 
-**Fase 1 — Forward Propagation:**
+**Fase 1   Forward Propagation:**
 1. Hitung net input hidden layer: `h_in = X · w_hidden + b_hidden`
 2. Aktivasi hidden layer: `h = tanh(h_in)`
 3. Hitung net input output layer: `y_in = h · w_output + b_output`
 4. Aktivasi output layer: `y = tanh(y_in)`
 
-**Fase 2 — Backward Propagation:**
+**Fase 2   Backward Propagation:**
 1. Hitung error output: `error = target - y`
 2. Hitung delta output: `d_y = error × tanh'(y)`
 3. Propagasi error ke hidden layer: `error_h = d_y · w_output^T`
@@ -168,7 +168,7 @@ Hasil setiap epoch disimpan ke `hasilBackpropagation.txt`. Pelatihan berhenti ji
 
 ---
 
-## 4. `Backpropagation_xor.py` — Pengujian Backpropagation pada Masalah XOR
+## 4. `Backpropagation_xor.py`   Pengujian Backpropagation pada Masalah XOR
 
 ### Gambaran Umum
 File eksekusi yang menguji kelas `Backpropagation` menggunakan dataset gerbang logika **XOR Bipolar**.
@@ -194,7 +194,7 @@ target_error = 0.001  # Ambang batas SSE
 3. Memanggil `model.fit(X, t)` untuk memulai pelatihan
 4. Hasil dan log disimpan ke `hasilBackpropagation.txt`
 
-> **Catatan:** XOR adalah masalah *non-linearly separable* — tidak bisa diselesaikan oleh Perceptron satu lapis, namun dapat diselesaikan oleh jaringan multilayer dengan Backpropagation.
+> **Catatan:** XOR adalah masalah *non-linearly separable*   tidak bisa diselesaikan oleh Perceptron satu lapis, namun dapat diselesaikan oleh jaringan multilayer dengan Backpropagation.
 
 ---
 
